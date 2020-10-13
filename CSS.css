@@ -1,0 +1,196 @@
+body, html {
+  height: 100%;
+}
+.parallax0 {
+  /* The image used */
+  background-image: url("pic/p1.png");
+
+  height: 60%;
+
+  /* Set a specific height */
+  min-height: 800px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("pic/p2.png");
+
+  height: 80%;
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+.parallax2 {
+  /* The image used */
+  background-image: url("pic/p3.png");
+
+  height: 80%;
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax3 {
+  /* The image used */
+  background-image: url("pic/p4.png");
+
+  height: 80%;
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax4 {
+  /* The image used */
+  background-image: url("pic/p5.png");
+
+  height: 80%;
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax5 {
+  /* The image used */
+  background-image: url("pic/p6.png");
+
+  height: 80%;
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.column2 {
+  float: left;
+  width: 50%;  
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column3 {
+  float: left;
+  width: 33.33%; 
+
+}
+
+/* Clear floats after the columns */
+.row3:after {
+  content: "";
+  display: table;
+  clear: both;
+
+  
+}
+.titles{
+	margin-left: 10px;
+	font-size:40px;
+	font-weight: bold;
+}
+.text{
+	margin: 10px 10px 10px 15px;
+	font-size:32px;
+	color: #636366;
+}
+.text1{
+	margin: 10px 15px 10px 15px;
+	font-size:32px;
+	color: #5C6E8E;
+}
+.text2{
+	margin: 10px 15px 10px 10px;
+	font-size:32px;
+	color: #BB6E8E;
+}
+
+.text3{
+  margin: 10px 15px 10px 10px;
+  font-size:22px;
+  color: #BB6E8E;
+}
+
+.ex{
+	margin: 10px 10px 10px 10px;
+	font-size:26px;
+	color: #636366;
+	font-style: italic;
+}
+.ul {
+    list-style: square;
+}
+  ul {
+    list-style-type: none;
+    position: fixed;
+    background-color: #333;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+  .active {
+    background-color: #4CAF50;
+  }
+
+  /*https://www.w3schools.com/howto/howto_js_scroll_to_top.asp*/
+
+  footer {
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#636366;
+    color: white;
+    text-align: center;
+  }

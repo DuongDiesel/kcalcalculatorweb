@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>栄養のバランス</title>
+  <link href="CSS.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+	<script type="text/javascript">
+
+		window.onload =function (){
+
+			var height = 160;
+			var leverEx = 25;
+			var weightMedium = 160*160*22*0.0001;
+			var kcalSum = weightMedium*leverEx;
+
+			document.getElementById("leverEx1").checked = true;
+			document.getElementById('leverExName').innerHTML = leverEx;
+			document.getElementById('weightMedium').innerHTML = weightMedium;
+			
+				
+			//kcalSum.toFixed(2);
+	
+			var prok = kcalSum*0.2;
+			prok=parseFloat(prok.toFixed(2));
+			var pro = prok/4;
+			pro=parseFloat(pro.toFixed(2));
+	
+			var lik = kcalSum*0.2;
+			lik=parseFloat(lik.toFixed(2));
+			var li = lik/9;
+			li=parseFloat(li.toFixed(2));
+	
+			var cabk = kcalSum*0.6;
+			cabk=parseFloat(cabk.toFixed(2));
+			var cab = cabk/4;
+			cab=parseFloat(cab.toFixed(2));
+
+			//console.log(kcalSum);
+			//console.log(prok);
+			//console.log(pro);
+			//console.log(lik);
+			//console.log(li);
+			//console.log(cabk);
+			//console.log(cab);
+			//console.log(document.getElementById("leverExName").value);
+			document.getElementById('kcalSum').innerHTML = kcalSum;
+	
+			document.getElementById('prok').innerHTML = prok;
+			document.getElementById('pro').innerHTML = pro;
+	
+			document.getElementById('lik').innerHTML = lik;
+			document.getElementById('li').innerHTML = li;
+	
+			document.getElementById('cabk').innerHTML = cabk;
+			document.getElementById('cab').innerHTML = cab;
+			
+			}
+			
+		
+			function getandsetValue() {
+						
+				var height = document.getElementById("heightUI").value;
+				var leverEx = document.getElementById("leverExName").innerText;
+				//console.log(height);
+				//console.log(leverEx);
+				var weightMedium = parseInt(height)*parseInt(height)*22*0.0001;
+				
+				var kcalSum = weightMedium*parseInt(leverEx);
+				kcalSum=parseFloat(kcalSum.toFixed(2));
+				//console.log(parseFloat(kcalSum.toFixed(2)));
+		
+				var prok = kcalSum*0.2;
+				prok=parseFloat(prok.toFixed(2));
+				//console.log(prok);
+				var pro = prok/4;
+				pro=parseFloat(pro.toFixed(2));
+		
+				var lik = kcalSum*0.2;
+				lik=parseFloat(lik.toFixed(2));
+				var li = lik/9;
+				li=parseFloat(li.toFixed(2));
+		
+				var cabk = kcalSum*0.6;
+				cabk=parseFloat(cabk.toFixed(2));
+				var cab = cabk/4;
+				cab=parseFloat(cab.toFixed(2));
+		
+				document.getElementById('kcalSum').innerText = kcalSum;
+		
+				document.getElementById('prok').innerText = prok;
+				document.getElementById('pro').innerText = pro;
+		
+				document.getElementById('lik').innerText = lik;
+				document.getElementById('li').innerText = li;
+		
+				document.getElementById('cabk').innerText = cabk;
+				document.getElementById('cab').innerText = cab;
+			}
+			
+		
+			function scrollTopFunction0() {
+				  document.body.scrollTop = 0; // For Safari
+				  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+			}
+		
+			function scrollTopFunction1() {
+				  document.body.scrollTop = 1600; // For Safari
+				  document.documentElement.scrollTop = 1600; // For Chrome, Firefox, IE and Opera
+			}
+		
+			function scrollTopFunction2() {
+				  document.body.scrollTop = 3100; // For Safari
+				  document.documentElement.scrollTop = 3100; // For Chrome, Firefox, IE and Opera
+			}
+		
+			function scrollTopFunction3() {
+				  document.body.scrollTop = 4400; // For Safari
+				  document.documentElement.scrollTop = 4400; // For Chrome, Firefox, IE and Opera
+			}
+		
+			function scrollTopFunction4() {
+				  document.body.scrollTop = 5800; // For Safari
+				  document.documentElement.scrollTop = 5800; // For Chrome, Firefox, IE and Opera
+			}
+		
+			function scrollTopFunction5() {
+				  document.body.scrollTop = 7200; // For Safari
+				  document.documentElement.scrollTop = 7200; // For Chrome, Firefox, IE and Opera
+			}
+		
+			
+		  </script>
+
+
+<ul>
+  <li><a onclick="scrollTopFunction0()" id="top4list">Home</a></li>
+  <li><a onclick="scrollTopFunction1()">糖質</a></li>
+  <li><a onclick="scrollTopFunction2()">たんぱく質</a></li>
+  <li><a onclick="scrollTopFunction3()">脂質</a></li>
+  <li><a onclick="scrollTopFunction4()">水とビタミとの必要性</a></li>
+  <li><a onclick="scrollTopFunction5()">朝食の大切</a></li>
+</ul>
+
+<div class="parallax0"></div>
+
+<div style="height:850px;background-color:#EEE;font-size:32px" id="pageDiv1">
+		<div class="row2" id="pageDiv2">
+			<div class="column2">
+				<p class="titles">1日に必要なエネルギーの計算方法</p>
+
+        		<p class="text">
+					1日に必要なエネルギー(kcal) =標準体重(kg)
+					※× 標準体重1kgあたりに必要なエネルギー<br>
+
+					<strong>活動別・標準体重1kgあたりの1日に必要なエネルギーを選んでください:</strong><br>
+
+					<form oninput="leverExName.value=parseInt(cal.value)">
+					<p class="text"><input type="radio" name="cal" id="leverEx1" value=25 onchange="getandsetValue()"> <b><u>軽労働</u></b>（デスクワークの多い事務員・技術者・管理職など）: 25-30kcal</p>
+					<p class="text"><input type="radio" name="cal" id="leverEx2" value=35 onchange="getandsetValue()"> <b><u>中労働</u></b>（外歩きの多い営業マン・店員・工員など） : 35-30kcal</p>
+					<p class="text"><input type="radio" name="cal" id="leverEx3" value=40 onchange="getandsetValue()"> <b><u>重労働</u></b>（農業/漁業従事者・建設作業員など） : 35-40kcal</p>
+
+					選んだ標準体重は：<output name="leverExName" id="leverExName" ></output> Kcal
+					</form>
+        		</p>
+			</div>
+			<div class="column2">
+				<p class="titles"> 身長と体重を入力して下さい：</p>
+				<form oninput="weightMedium.value=parseInt(heightUI.value)*parseInt(heightUI.value)*0.0001*22">
+					<p class="text1">
+					身長: <input type="number" id ="heightUI" value="160" min="0" onchange="getandsetValue()"></br>
+					標準体重 = 身長(cm) × 身長(cm) × 22	/ 10000 = <output name="weightMedium" id="weightMedium" ></output><br>
+					</p>
+				</form>
+				<p class="text1">1日に必要なエネルギー(kcal) = 標準体重(kg) × 標準体重1kgあたりに必要なエネルギー = <span id="kcalSum" style="font-size:30px;font-family:arial;color:red"></span>Kcal<br></p>
+
+			</div>
+
+		</div>
+</div>
+
+<div class="parallax1"></div>
+
+<div style="height:850px;background-color:#EEE;font-size:32px">
+		<div class="row3">
+			<div class="column3">
+				<p class="titles">糖質の起源</p>
+
+				<p class="text">ブドウ糖や果糖などの単糖から</p>
+			</div>
+			<div class="column3">
+				<p class="titles">Kcal</p>
+
+				<p class="text1">1gが約4kcal</p>
+
+				<p class="text1">あなたの1日に必要な糖質= 1日に必要なエネルギー(kcal) × 60％ = <span id="cabk" style="font-size:30px;font-family:arial;color:red"></span>Kcal = <span id="cab" style="font-size:30px;font-family:arial;color:red"></span>g</p>
+			</div>
+			<div class="column3">
+				<p class="titles">糖質の特徴</p>
+
+				<p class="text2">*食べやすい</p>
+				<p class="text2">*食べ過ぎ分は脂質になりやすい</p>
+				<p class="text2">*一日分のエネルギーの中に50～65％を占める。</p>
+				<p class="ex">例：2,000kcal×0.5～0.65＝1,000～1,300kcal</p>
+			</div>
+		</div>
+</div>
+<div class="parallax2"></div>
+
+	<div style="height:750px;background-color:#EEE;font-size:32px">
+
+		<div class="row2">
+			<div class="column2">
+				<p class="titles">定義</p>
+        		<p class="text1">
+				*「プロテイン」とは、「たんぱく質」を英語訳したものだ。<br>
+        		*「プロテイオス」ということば。意味は「もっとも重要なもの」という意味だ。<br>
+        		</p>
+			</div>
+			<div class="column2">
+				<p class="titles">どのぐらい食べるがいいのか？</p>
+        		<p class="text2">
+				特に運動をしていない一般人であれば、体重1㎏あたり1gでこと足りる。<br>
+				推奨量は、成人男性は一日60g、成人女性は一日50gとなっている。<br>
+        		動物からだけじゃなくて、植物からのたんぱく質もある。<br>
+				</p>
+				<p class="text2">あなたの1日に必要なたんぱく質= 1日に必要なエネルギー(kcal) × 20％ = <span id="prok" style="font-size:30px;font-family:arial;color:red"></span>Kcal = <span id="pro" style="font-size:30px;font-family:arial;color:red"></span>g</p>
+			</div>
+		</div>
+	</div>
+
+<div class="parallax3"></div>
+
+<div style="height:750px;background-color:#EEE;font-size:32px">
+		<div class="row2">
+			<div class="column2">
+        		<p class="titles">	脂質とは</p>
+				<p class="text">三大栄養素の脂質は1g=9kcalと、三大栄養素の中でも最も高いエネルギーを得ることができます。</p>
+				<p class="text">あなたの1日に必要な脂質= 1日に必要なエネルギー(kcal) × 20％ = <span id="lik" style="font-size:30px;font-family:arial;color:red"></span>Kcal = <span id="li" style="font-size:30px;font-family:arial;color:red"></span>g</p>
+			</div>
+			<div class="column2">
+				<p class="titles">	脂質の特徴</p>
+        		<p class="text1">
+          			欠かせない<br>
+          			エネルギー高い<br>
+          			肥満注意<br>
+      			</p>
+			</div>
+		</div>
+</div>
+<div class="parallax4"></div>
+
+<div style="height:750px;background-color:#EEE;font-size:32px">
+		<div class="row2">
+			<div class="column2">
+        <p class="titles">水の必要性 </p>
+          <p class="text">
+          人間は水から<br>
+          体熱を調整<br>
+          必要な量が固定されてない <br>
+          摂取される水と代謝水総量は1日約2,400ml <br>
+      	</p>
+			</div>
+			<div class="column2">
+        <p class="titles">ビタミン</p>
+        <p class="text1">生育に微量に必要な栄養素のうち,生物の体内で十分な量を合成できない炭水化物・タンパク質・脂質以外の有機化合物の総称である </p>
+			</div>
+		</div>
+</div>
+<div class="parallax5"></div>
+
+<div style="height:600px;background-color:#EEE;font-size:32px">
+	<div class="row2" >
+		<div class="column2" >
+        	<p class="titles">朝食の大切</p>
+         	<p class="text">
+				*朝食をとらないと活動するためのエネルギー不足で体調不良をおこしたり、集中力がなくなるなどの問題が指摘されています。<br>
+
+				*基礎代謝も低下し食事からとったエネルギーをため込みやすい身体になるため、過食や肥満になりやすい食生活をしてしまう恐れがあります。
+			 </p>
+		</div>
+
+		<div class="column2" >
+        	<p class="titles">食事の注意</p>
+         	<p class="text1">
+          	* 三食きちんと<br>
+          	* 同じものばっかり食べない<br>
+          	* 間食を控える<br>
+          	* 水分摂取<br>
+        	</p>
+		</div>
+</div>
+
+<footer>
+	<p>参考文献</p>
+	<p class="text3">
+		https://www.tyojyu.or.jp/net/kenkou-tyoju/eiyouso/tansuikabutsu.html <br>
+		https://www.tyojyu.or.jp/net/kenkou-tyoju/eiyouso/shishitsu-shibousan.html <br>
+		https://www.tyojyu.or.jp/net/kenkou-tyoju/eiyouso/shishitsu-shibousan.html
+
+	</p>
+    <p><strong>Made by DuongDiesel</strong></p>
+  </footer>
+
+
+
+
+
+</body>
+</html>
